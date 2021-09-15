@@ -1,0 +1,296 @@
+@charset "utf-8";
+@import url(fonts.css);
+@import url(reset.css);
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 15px;
+    color: #4e4e4e;
+    height: 3000px;
+}
+.inner {
+    width: 1500px;
+    margin: 0 auto;
+}
+.fade {
+    position: relative;
+}
+
+/*header*/
+.wrap {
+    overflow: hidden;
+}
+header {
+    position: fixed;
+    top: 13%;
+    right: 0;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    z-index: 1;
+}
+header a {
+    writing-mode: vertical-lr;
+    font-size: 16px;
+    letter-spacing: 3px;
+    line-height: 120px;
+    cursor: pointer;
+    margin-bottom: 40px;
+    transition: all 0.3s;
+}
+header a.active,
+header a:hover {
+    color: #ffce00;
+    letter-spacing: 10px;
+    font-weight: 600;
+}
+
+/*Home*/
+.home {
+    width: 100%;
+}
+.home .typing-txt{
+    display: none;
+}
+.home .typing {
+    display: inline-block;
+    animation-name: cursor;
+    animation-duration: 0.3s;
+    animation-iteration-count: infinite;
+}
+@keyframes cursor {
+    0%{border-right: 1px solid #fff;}
+    50%{border-right: 1px solid #000;}
+    100%{border-right: 1px solid #fff;}
+}
+.home .wrapper {
+    height: 100vh;
+    position: relative;
+}
+.home .wrapper .center {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.home h1 {
+    text-align: center;
+    font-size: 50px;
+    font-weight: 600;
+    margin-top: 300px;
+}
+.home p {
+    text-align: center;
+    margin-top: 80px;
+    font-size: 20px;
+    font-weight: 500;
+}
+.home::before {
+    animation: rotate_image 8s linear infinite;
+    transform-origin: 50% 50%;
+    content: url(../img/icon.jpg);
+    width: 20%;
+    height: auto;
+    position: absolute;
+    top: 10%;
+    left: 8%;
+    z-index: -1;
+}
+@keyframes rotate_image{
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.home::after {
+    content: '';
+    position: absolute;
+    top: 47%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 650px;
+    height: 3px;
+    background: #ffce00;
+}
+.home-title span {
+    padding: 10px 25px 15px 30px;
+    background: #ffce00;
+    color: #fff;
+}
+
+/*About*/
+.about {
+    width: 100%;
+    height: 100vh;
+    background: #f4f2f2;
+}
+.about h1 {
+    font-size: 40px;
+    font-weight: 500;
+    padding: 50px 0;
+    margin-bottom: 20px;
+    color: #ffce00;
+    text-shadow: 2px 2px 2px #c1c1c1;
+    border-bottom: 2px solid #ffce00;
+}
+.about .about-title h3 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #ffce00;
+}
+.about .about-title ul li {
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+.about .about-title .left {
+    float: left;
+}
+.about .about-title .left span img {
+    width: 200px;
+    height: auto;
+    margin-top: 70px;
+    margin-bottom: 60px;
+}
+.about .about-title .right {
+    float: right;
+    width: 800px;
+    margin-right: 230px;
+    margin-top: 120px;
+}
+.about .about-title .right p {
+    font-size: 18px;
+    line-height: 1.6;
+    letter-spacing: 2px;
+    margin-bottom: 130px;
+    word-break: keep-all;
+}
+.about .about-title .right .right-text ul {
+    float: left;
+    margin-right: 130px;
+}
+.about .about-title .right .right-text ul:last-child {
+    margin-right: 0;
+}
+
+/*Skill*/
+.skill {
+    width: 100%;
+    height: 100vh;
+}
+.skill h1 {
+    font-size: 40px;
+    font-weight: 500;
+    padding: 50px 0;
+    margin-bottom: 20px;
+    color: #ffce00;
+    text-shadow: 2px 2px 2px #c1c1c1;
+    border-bottom: 2px solid #ffce00;
+}
+.skill .skill-title {
+    text-align: center;
+    margin-top: 150px;
+}
+.skill .skill-title ul {
+    float: left;
+    width: 500px;
+    height: 300px;
+    overflow: hidden;
+}
+.skill .skill-title ul li {
+    margin-right: 100px;
+    letter-spacing: 2px;
+    line-height: 1.6;
+    font-size: 16px;
+    word-break: keep-all;
+}
+.skill .skill-title ul li img {
+    width: 90px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.skill .skill-title .jQuery img {
+    margin-top: 50px;
+}
+
+/*PortFolio*/
+.portfolio {
+    position: relative;
+    width: 100%;
+    /*height: 150vh;*/
+    background: #f4f2f2;
+}
+.portfolio .add{
+    position: absolute;
+    top: 5%;
+    right: 15%;
+    font-size: 30px;
+    color: #6d6d6d;
+    transition: 0.5s;
+}
+.portfolio .add i:hover {
+    font-size: 35px;
+    color: #ffce00;
+}
+.portfolio .project-contents {
+    height: 540px;
+    margin-bottom: 20px;
+}
+.portfolio h1 {
+    font-size: 40px;
+    font-weight: 500;
+    padding: 50px 0;
+    margin-bottom: 20px;
+    color: #ffce00;
+    text-shadow: 2px 2px 2px #c1c1c1;
+    border-bottom: 2px solid #ffce00;
+}
+.portfolio .project {
+    margin-top: 40px;
+}
+.portfolio .project::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+.portfolio .project h3 {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #ffce00;
+}
+.portfolio .project p {
+    height: 80px;
+    word-break: keep-all;
+    margin-bottom: 15px;
+    padding: 20px;
+}
+.portfolio .project .text {
+    border: none;
+    width: 300px;
+    padding: 10px;
+    overflow: hidden;
+}
+.portfolio .project div {
+    float: left;
+    width: 300px;
+    padding: 25px;
+    margin-right: 20px;
+    border: 1px solid #b2b2b2;
+    border-radius: 3px;
+    overflow: hidden;
+}
+.portfolio .project a img {
+    width: 300px;
+    height: 280px;
+    margin-bottom: 30px;
+    transition: all 0.3s;
+}
+.portfolio .project a img:hover {
+    width: 310px;
+    height: 290px;
+}
