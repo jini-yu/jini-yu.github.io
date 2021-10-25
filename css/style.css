@@ -148,6 +148,12 @@ header a:hover {
 .about .about-title .left {
     float: left;
 }
+.about .about-title .left ul li > span {
+    padding: 0 20px;
+    background: #fff;
+    font-weight: 500;
+    color: #ffce00;
+}
 .about .about-title .left span img {
     width: 200px;
     height: auto;
@@ -223,17 +229,31 @@ header a:hover {
     /*height: 150vh;*/
     background: #f4f2f2;
 }
-.portfolio .add{
+.portfolio .add01 {
     position: absolute;
-    top: 5%;
-    right: 15%;
+    top: 6%;
+    left: 25%;
     font-size: 30px;
     color: #6d6d6d;
     transition: 0.5s;
 }
-.portfolio .add i:hover {
-    font-size: 35px;
+.portfolio .add02 {
+    position: absolute;
+    top: 6%;
+    left: 28%;
+    font-size: 30px;
+    color: #6d6d6d;
+    transition: 0.5s;
+}
+.portfolio .add01 i:hover {
+    font-size: 32px;
     color: #ffce00;
+    transition: all .2s;
+}
+.portfolio .add02 i:hover {
+    font-size: 32px;
+    color: #ffce00;
+    transition: all .2s;
 }
 .portfolio .project-contents {
     height: 540px;
@@ -294,3 +314,57 @@ header a:hover {
     width: 310px;
     height: 290px;
 }
+.portfolio .project .btn-popup01 {
+    border: none;
+    border-style: none;
+    background: none;
+}
+.portfolio .project .btn-popup02 {
+    border: none;
+    border-style: none;
+    background: none;
+}
+.portfolio .project .btn-popup01 img {
+    width: 300px;
+    height: 280px;
+    margin-bottom: 30px;
+    transition: all 0.3s;  
+}
+.portfolio .project .btn-popup01 img:hover {
+    width: 310px;
+    height: 290px;
+}
+.portfolio .project .btn-popup02 img {
+    width: 300px;
+    height: 280px;
+    margin-bottom: 30px;
+    transition: all 0.3s;  
+}
+.portfolio .project .btn-popup02 img:hover {
+    width: 310px;
+    height: 290px;
+}
+/*popup*/
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow-y: scroll;
+            z-index:999;
+            display: none;
+        }
+        .dimmed {
+            background: rgba(0,0,0,.7);
+            width: 100%;
+            height: 140%;
+        }
+        .modal > .content img{
+            position: absolute;
+            top: 4%;
+            left: 50%;
+            width:25%;
+            transform: translateX(-50%);
+        }
+

@@ -103,6 +103,22 @@ $(function () {
     });
   });
     
+    /*popup*/
+    $(document).ready(function () {
+        $modal = $(".modal");
+
+        $(".btn-popup01").click(function () {
+
+            var imageName = $(this).attr('id');
+            $modal.find('img').attr('src', './img/' + imageName + '-web.jpg');
+            $modal.show();
+            return false;
+        });
+        $(".dimmed").click(function () {
+            $modal.hide();
+        });
+    });
+    
 });
 
 
